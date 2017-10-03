@@ -16,6 +16,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBPeripheralM
     var peripheralManager: CBPeripheralManager!
     // let locationManager = CLLocationManager()
     
+    @IBOutlet weak var bluetoothStatus: UILabel!
+    
     func initLocalBeacon() {
         if localBeacon != nil {
             stopLocalBeacon()
@@ -43,8 +45,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBPeripheralM
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         if peripheral.state == .poweredOn {
             peripheralManager.startAdvertising(beaconPeripheralData as! [String: AnyObject]!)
+            print("Gedouddahere")
+            bluetoothStatus.text = "Bluetooth Status: ON"
         } else if peripheral.state == .poweredOff {
             peripheralManager.stopAdvertising()
+            print("Woah, what the fuck man?!")
+            bluetoothStatus.text = "Bluetooth Status: OFF"
         }
     }
     
