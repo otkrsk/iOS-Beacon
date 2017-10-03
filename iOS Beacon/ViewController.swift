@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Beaker Beacon
+//  iOS Beacon
 //
 //  Created by Nicholas Nuing on 03/10/2017.
 //  Copyright © 2017 otakrosak. All rights reserved.
