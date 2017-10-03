@@ -4,7 +4,6 @@
 //
 //  Created by Nicholas Nuing on 03/10/2017.
 //  Copyright © 2017 otakrosak. All rights reserved.
-//  5725E00C-D553-4E09-8473-77AD8EE665EB
 //
 
 import UIKit
@@ -25,7 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBPeripheralM
         let localBeaconUUID = "5725E00C-D553-4E09-8473-77AD8EE665EB"
         let localBeaconMajor: CLBeaconMajorValue = 123
         let localBeaconMinor: CLBeaconMinorValue = 456
-        let beaconID = "com.otakrosak.Beaker-Beacon"
+        let beaconID = "com.otakrosak.iOS-Beacon"
         
         let uuid = UUID(uuidString: localBeaconUUID)!
         localBeacon = CLBeaconRegion(proximityUUID: uuid, major: localBeaconMajor, minor: localBeaconMinor, identifier: beaconID)
